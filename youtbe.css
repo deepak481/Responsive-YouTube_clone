@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+/* header */
+.material-icons, .material-icons-outlined{
+    color: rgb(96, 96, 96);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    padding: 15px;
+}
+.header_left {
+    display: flex;
+    align-items: center;
+}
+.header_left img {
+    width: 110px;
+    margin-left: 15px;
+}
+.header i {
+    padding: 0px 7px;
+    cursor: pointer;
+}
+.header_search {
+    display: flex;
+}
+.header_search form {
+    border: 1px solid #ddd;
+    height: 35px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.header_search input {
+    width: 500px;
+    border: none;
+    padding: 10px;
+    border-radius: 0;
+    margin: 0;
+}
+.header_search form button {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+}
+.header_search button {
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(247 247 247);
+    margin-left: 10px;
+}
+/* mainBody */
+.mainBody {
+    height: calc(100vh - 70px);
+    display: flex;
+    overflow: hidden;
+}
+/* .sideBar */
+.sideBar {
+    height: 100%;
+    width: 230px;
+    background-color: white;
+    overflow-y: scroll;
+}
+.sideBar_Categories {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.sideBar_Category{
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    margin-right: 15px;
+}
+.sideBar_Category span {
+    margin-left: 15px;
+}
+.sideBar_Category:hover {
+    background-color: #e5e5e5;
+    cursor: pointer;
+}
+.sideBar::-webkit-scrollbar {
+    display: none;
+}
+.sideBar_Category i {
+    color: rgb(37, 35, 35);
+}
+hr {
+    height: 1px;
+    background-color: #e5e5e5;
+    border: none;
+}
+/* .videos */
+
+.videos {
+    width: 100%;
+    height: 100%;
+    padding: 15px 0px;
+    border-top: 1px solid #ddd;
+}
+.topics {
+    display: flex;
+    padding-bottom: 15px;
+    width: calc(100vw - 70%);
+    justify-content: space-around;
+}
+.topics button {
+    border-radius: 15px;
+    padding: 5px 5px;
+    min-width: 50px;
+    background-color: #e5e5e5;
+    border: none;
+}
+.topics button:hover {
+    background-color: rgba(197, 194, 194, 0.76);
+}
+.videos_container {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    height: 100%;
+    overflow-y: scroll;
+    padding-bottom: 20px;
+}
+.vedio {
+    width: 23%;
+    margin: 10px 10px;
+}
+.video_thumbnail {
+    width: 100%;
+    height: 170px;
+}
+.video_thumbnail img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+.author img {
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.video_details {
+    display: flex;
+    margin-top: 10px;
+}
+.title {
+    display: flex;
+    flex-direction: column;
+}
+.title h3 {
+    color: rgb(3, 3, 3);
+    line-height: 18px;
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.title a,span {
+    text-decoration: none;
+    color: rgb(96, 96, 96);
+    font-size: 14px;
+}
+@media (max-width:425px) {
+    .mainBody {
+        width: 750px;
+        height: auto;
+    }
+    .topics {
+        display: flex;
+        padding-bottom: 15px;
+        width: 400px;
+        justify-content: space-around;
+        margin-left: 60px;
+    }
+    .header_icons .material-icons-outlined {
+        display: none;
+    }
+    .sideBar {
+        display: none;
+    }
+    .vedio {
+        width: 100% !important; 
+        margin: 12px 60px;
+    }
+    .video_thumbnail {
+        height: 350px;
+    }
+    .disappear {
+        display: none;
+    }
+    .header_search {
+        margin-left: 260px;
+    }
+    .header i {
+        padding: 0px 30px;
+    }
+}
+@media (max-width:945px) {
+    .disappear {
+        display: none;
+    }
+    .sideBar {
+        display: none;
+    }
+    .header_search {
+        margin-left: 260px;
+    }
+    .header i {
+        padding: 0px 30px;
+    }
+    .header_icons .material-icons-outlined {
+        display: none;
+    }
+    .topics {
+        display: flex;
+        padding-bottom: 15px;
+        width: 400px;
+        justify-content: space-around;
+        margin-left: 25px;
+    }
+    .vedio {
+        width: 44%;
+    }
+    .header_search button {
+        border-radius: 0%;
+        border: grey 1px solid;
+    }
+    .show-sidebar {
+        display: inline;
+        position: fixed;
+        top: 4.4rem;
+        height: auto;
+    }
+}
